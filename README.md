@@ -18,24 +18,39 @@ Built in collaboration w/ [Konrad Urban](https://www.kkonrad.com/) (original ide
 - Ideographic space (U+3000)
 - and more
 
-## Install (Chrome)
+## Install
 
-1. Download or clone this repo.
-2. Open Chrome and go to `chrome://extensions`.
-3. Enable "Developer mode" (top-right).
-4. Click "Load unpacked" and select the project folder.
+### Option 1: From Chrome Web Store
 
-The content script runs automatically on all pages you visit.
+_Coming soon - extension under review_
 
-## How it works
+### Option 2: Manual Install
 
-- Scans text nodes and wraps target characters in `<span>` elements with a highlight class.
-- Uses a `MutationObserver` to handle dynamic content.
-- Avoids editing inside inputs, code blocks, pre tags, and editable content.
+1. Download or clone this repo
+2. Open Chrome → `chrome://extensions`
+3. Enable "Developer mode" (top-right)
+4. Click "Load unpacked" → select the project folder
 
-## Uninstall
+## Development
 
-Remove the extension from `chrome://extensions`.
+### Making Changes
+
+1. Edit the code
+2. Go to `chrome://extensions` → click reload button on the extension
+3. Refresh any tabs to test changes
+
+### Creating a Release
+
+1. Update version in `manifest.json`
+2. Run `./package.sh` to create zip file
+3. Upload the zip to Chrome Web Store
+4. Commit and push: `git add -A && git commit -m "v0.x.x" && git push`
+
+## How it Works
+
+- Scans text and highlights target Unicode characters
+- Uses `MutationObserver` for dynamic content
+- Avoids inputs, code blocks, and editable areas
 
 ## Privacy Policy
 
