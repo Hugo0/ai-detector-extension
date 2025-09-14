@@ -2,6 +2,8 @@
 
 Highlights em dashes (—) and selected non-standard Unicode spaces on any webpage. Useful for spotting formatting artifacts often seen in AI-generated text.
 
+Built in collaboration w/ [Konrad Urban](https://www.kkonrad.com/) (original idea), implemented by [Hugo Montenegro](https://hugo0.com).
+
 ## What it highlights
 
 - Em dash (U+2014)
