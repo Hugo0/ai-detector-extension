@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "AI Detector: Em Dashes & Unicode Spaces Highlighter",
+  "version": "0.1.0",
+  "description": "Highlights em dashes and selected Unicode spaces on webpages to help spot likely AI-generated text.",
+  "permissions": [],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

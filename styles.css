@@ -1,0 +1,42 @@
+/* .ai-detector-highlight {
+  background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.85) 60%);
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  outline: 1px solid rgba(230, 180, 0, 0.5);
+} */
+
+.ai-detector-highlight {
+  background: rgba(255, 235, 59, 0.5);
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Make narrower spaces easier to spot */
+.ai-detector-highlight[class*="ai-detector-u\\+2009"],
+.ai-detector-highlight[class*="ai-detector-u\\+200a"],
+.ai-detector-highlight[class*="ai-detector-u\\+2006"],
+.ai-detector-highlight[class*="ai-detector-u\\+2007"],
+.ai-detector-highlight[class*="ai-detector-u\\+2008"],
+.ai-detector-highlight[class*="ai-detector-u\\+2004"],
+.ai-detector-highlight[class*="ai-detector-u\\+2005"],
+.ai-detector-highlight[class*="ai-detector-u\\+202f"],
+.ai-detector-highlight[class*="ai-detector-u\\+205f"] {
+  text-decoration: underline dotted rgba(200, 120, 0, 0.9);
+}
+
+/* Em dash: slightly stronger emphasis */
+.ai-detector-highlight[class*="ai-detector-u\\+2014"] {
+  background: rgba(255, 193, 7, 0.85);
+  outline: 1px solid rgba(255, 152, 0, 0.6);
+}
+
+/* Zero-width spaces: draw a visible placeholder */
+.ai-detector-highlight.ai-detector-zerowidth::before {
+  content: "\25AA"; /* small square marker */
+  display: inline-block;
+  color: #c00;
+  font-size: 0.75em;
+  line-height: 1;
+  vertical-align: middle;
+  margin: 0 1px;
+}
